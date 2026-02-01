@@ -1,4 +1,4 @@
-* {
+** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -338,6 +338,95 @@
     color: rgb(186, 186, 186);
     margin-right: 4px;
     transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .navbar-container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .navbar-links li {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  /* Home section */
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .homeContainer-left,
+  .homeContainer-right {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .home-title {
+    font-size: 40px;
+  }
+
+  .home-titlePlusPng {
+    justify-content: center;
+  }
+
+  /* Cards */
+  .card-container {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  /* Dark grey banner */
+  .dark-grey-container {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .left-pic,
+  .right-pic {
+    display: none;
+  }
+
+  .left-para,
+  .right-para {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Main split layouts */
+  .main-container {
+    flex-direction: column;
+  }
+
+  .adopt-pet,
+  .post-pet {
+    max-width: 100%;
+  }
+
+  /* Contact page */
+  .contactUs-main-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contactUs-left-para {
+    width: 100%;
+  }
+
+  .contactUs-pic img {
+    height: auto;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .navbar-container {
@@ -1552,4 +1641,93 @@ body {
     color: rgb(255, 255, 255);
     margin-right: 4px;
     transition: all 0.3s ease;
+}
+
+
+
+
+/* ==============================
+   FINAL RESPONSIVE OVERRIDES
+   (Do NOT add anything below)
+============================== */
+
+/* Fix overflow issues */
+body {
+  overflow-x: hidden;
+}
+
+/* Desktop sanity fixes */
+.navbar-container,
+.home-container,
+.main-container {
+  max-width: 100%;
+}
+
+/* Tablet + Mobile */
+@media (max-width: 768px) {
+
+  .navbar-container {
+    flex-direction: column !important;
+    padding: 15px !important;
+  }
+
+  .navbar-links li {
+    display: block !important;
+    margin: 8px 0 !important;
+    text-align: center;
+  }
+
+  .home-container {
+    flex-direction: column !important;
+    width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .homeContainer-left,
+  .homeContainer-right {
+    width: 100% !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  .home-title {
+    font-size: 40px !important;
+  }
+
+  .dark-grey-container {
+    flex-direction: column !important;
+    height: auto !important;
+    width: 95% !important;
+  }
+
+  .left-pic,
+  .right-pic {
+    display: none !important;
+  }
+
+  .main-container {
+    flex-direction: column !important;
+  }
+
+  .adopt-pet,
+  .post-pet {
+    max-width: 100% !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .home-title {
+    font-size: 32px !important;
+  }
+
+  .Navbar-button,
+  .Home-button {
+    width: 100% !important;
+  }
+
+  .pet-view-card {
+    width: 90% !important;
+  }
 }
