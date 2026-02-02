@@ -1,4 +1,4 @@
-** {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -172,11 +172,9 @@
     margin-left: 30px;
 }
 
-.left-para {
-    .adopted-pets-num {
-        font-size: 40px;
-        display: inline;
-    }
+.left-para .adopted-pets-num {
+    font-size: 40px;
+    display: inline;
 }
 
 .right-para {
@@ -1645,38 +1643,29 @@ body {
 
 
 
-
 /* ==============================
    FINAL RESPONSIVE OVERRIDES
-   (Do NOT add anything below)
 ============================== */
-
-/* Fix overflow issues */
-body {
-  overflow-x: hidden;
-}
-
-/* Desktop sanity fixes */
-.navbar-container,
-.home-container,
-.main-container {
-  max-width: 100%;
-}
 
 /* Tablet + Mobile */
 @media (max-width: 768px) {
 
+  /* Navbar */
   .navbar-container {
+    display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding: 15px !important;
   }
 
   .navbar-links li {
     display: block !important;
     margin: 8px 0 !important;
-    text-align: center;
+    text-align: center !important;
   }
 
+  /* Home section */
   .home-container {
     flex-direction: column !important;
     width: 100% !important;
@@ -1686,32 +1675,31 @@ body {
   .homeContainer-left,
   .homeContainer-right {
     width: 100% !important;
+    max-width: 100% !important;
     padding: 0 !important;
     text-align: center !important;
   }
 
-  .home-title {
-    font-size: 40px !important;
+  /* Kill vw-based widths */
+  .dark-grey-container,
+  .left-para,
+  .right-para,
+  .adopt-pet,
+  .post-pet,
+  .admin-screen-left,
+  .admin-screen-right {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  .dark-grey-container {
-    flex-direction: column !important;
-    height: auto !important;
-    width: 95% !important;
-  }
-
-  .left-pic,
-  .right-pic {
-    display: none !important;
-  }
-
+  /* Stack main layouts */
   .main-container {
     flex-direction: column !important;
   }
 
-  .adopt-pet,
-  .post-pet {
-    max-width: 100% !important;
+  /* Prevent horizontal scroll */
+  body {
+    overflow-x: hidden !important;
   }
 }
 
@@ -1722,8 +1710,8 @@ body {
     font-size: 32px !important;
   }
 
-  .Navbar-button,
-  .Home-button {
+  .Home-button,
+  .Navbar-button {
     width: 100% !important;
   }
 
