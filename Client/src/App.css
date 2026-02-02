@@ -1664,6 +1664,44 @@ body {
     margin: 8px 0 !important;
     text-align: center !important;
   }
+  /* Proper mobile navbar */
+.navbar-links {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 12px !important;
+  width: 100%;
+}
+
+.navbar-links li {
+  width: 100%;
+  text-align: center;
+}
+
+.navbar-links li > * {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Mobile hero cleanup */
+.home-title {
+  font-size: 34px !important;
+  line-height: 1.1 !important;
+}
+
+.home-second-para {
+  font-size: 15px !important;
+}
+
+.home-titlePlusPng {
+  flex-direction: column !important;
+}
+
+.home-titlePlusPng img {
+  width: 60px !important;
+  margin: 10px auto 0 auto !important;
+}
 
   /* Home section */
   .home-container {
