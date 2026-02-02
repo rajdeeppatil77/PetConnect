@@ -1644,84 +1644,59 @@ body {
 
 
 /* ==============================
-   FINAL RESPONSIVE OVERRIDES
+   FINAL MOBILE FIX (DO NOT TOUCH ABOVE)
 ============================== */
 
-/* Tablet + Mobile */
+/* Tablets + Phones */
 @media (max-width: 768px) {
 
-  /* Navbar */
+  /* GLOBAL SAFETY */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden !important;
+  }
+
+  /* NAVBAR */
   .navbar-container {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 15px !important;
+    padding: 12px !important;
   }
 
   .navbar-links li {
     display: block !important;
-    margin: 8px 0 !important;
     text-align: center !important;
+    margin: 6px 0 !important;
   }
-  /* Proper mobile navbar */
-.navbar-links {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  gap: 12px !important;
-  width: 100%;
-}
 
-.navbar-links li {
-  width: 100%;
-  text-align: center;
-}
-
-.navbar-links li > * {
-  display: block;
-  width: 80%;
-  margin: 0 auto;
-}
-
-/* Mobile hero cleanup */
-.home-title {
-  font-size: 34px !important;
-  line-height: 1.1 !important;
-}
-
-.home-second-para {
-  font-size: 15px !important;
-}
-
-.home-titlePlusPng {
-  flex-direction: column !important;
-}
-
-.home-titlePlusPng img {
-  width: 60px !important;
-  margin: 10px auto 0 auto !important;
-}
-
-  /* Home section */
+  /* HOME SECTION */
   .home-container {
     flex-direction: column !important;
-    width: 100% !important;
     padding: 20px !important;
+    width: 100% !important;
   }
 
   .homeContainer-left,
   .homeContainer-right {
     width: 100% !important;
-    max-width: 100% !important;
     padding: 0 !important;
     text-align: center !important;
   }
 
-  /* Kill vw-based widths */
-  .dark-grey-container,
+  .home-title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* REMOVE VW-BASED LAYOUTS */
+  .card-container,
   .left-para,
   .right-para,
+  .dark-grey-container,
   .adopt-pet,
   .post-pet,
   .admin-screen-left,
@@ -1730,22 +1705,31 @@ body {
     max-width: 100% !important;
   }
 
-  /* Stack main layouts */
-  .main-container {
+  /* STACK EVERYTHING */
+  .main-container,
+  .planning-container,
+  .boxes-container {
     flex-direction: column !important;
+    align-items: center !important;
   }
 
-  /* Prevent horizontal scroll */
-  body {
-    overflow-x: hidden !important;
+  /* CARDS */
+  .card-container {
+    margin: 15px 0 !important;
+  }
+
+  /* IMAGES */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
 
-/* Small phones */
+/* SMALL PHONES */
 @media (max-width: 480px) {
 
   .home-title {
-    font-size: 32px !important;
+    font-size: 28px !important;
   }
 
   .Home-button,
@@ -1754,6 +1738,6 @@ body {
   }
 
   .pet-view-card {
-    width: 90% !important;
+    width: 95% !important;
   }
 }
